@@ -11,3 +11,5 @@ jobs:
           run: cowsay -f dragon " Run for me...I am dragon who breaths fire.." >> dragon.txt
         - name: View dragon name in file
           run: grep -i "dragon" dragon.txt
+        - name: View dragon 
+          run: cat dragon.txt 
