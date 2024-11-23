@@ -1,0 +1,13 @@
+name: Dragon File
+
+on: push
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Install cowsy
+          run: sudo apt install cowsay -y
+        - name: Genarate ASCII Dragon
+          run: cowsay -f dragon " Run for me...I am dragon who breaths fire.." >> dragon.txt
+        - name: View dragon name in file
+          run: grep -i "dragon" dragon.txt
